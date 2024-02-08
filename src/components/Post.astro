@@ -9,7 +9,7 @@ type Props = {
 }
 
 const {post} = Astro.props
-const author = await getEntryBySlug("authors", post.data.author)
+// const author = await getEntryBySlug("authors", post.data.author)
 ---
 
 <article>
@@ -26,9 +26,9 @@ const author = await getEntryBySlug("authors", post.data.author)
         />
     </a>
 
-    <div class="mb-4">
+    <!-- <div class="mb-4">
         <CategoryList categories={post.data.categories} />
-    </div>
+    </div> -->
 
     <a
         href={`/blog/${post.slug}`}
@@ -41,7 +41,7 @@ const author = await getEntryBySlug("authors", post.data.author)
         {post.body}
     </p>
 
-    <div class="flex justify-between items-center">
+    <!-- <div class="flex justify-between items-center">
         {
             author ? (
                 <a
@@ -56,5 +56,5 @@ const author = await getEntryBySlug("authors", post.data.author)
         <span class="text-zinc-700 text-xl">
             {post.data.date}
         </span>
-    </div>
+    </div> -->
 </article>
